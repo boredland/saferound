@@ -284,7 +284,7 @@
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
-"@commitlint/cli@^17.0.2":
+"@commitlint/cli@17.0.2", "@commitlint/cli@^17.0.2":
   version "17.0.2"
   resolved "https://registry.yarnpkg.com/@commitlint/cli/-/cli-17.0.2.tgz#57c925fb5f09b8e4a83448d94db291ddf7aa58ee"
   integrity sha512-Axe89Js0YzGGd4gxo3JLlF7yIdjOVpG1LbOorGc6PfYF+drBh14PvarSDLzyd2TNqdylUCq9wb9/A88ZjIdyhA==
@@ -300,7 +300,7 @@
     resolve-global "1.0.0"
     yargs "^17.0.0"
 
-"@commitlint/config-conventional@^17.0.2":
+"@commitlint/config-conventional@17.0.2":
   version "17.0.2"
   resolved "https://registry.yarnpkg.com/@commitlint/config-conventional/-/config-conventional-17.0.2.tgz#298c9076e25c1e8760f04ee1be8ce43c856a4b72"
   integrity sha512-MfP0I/JbxKkzo+HXWB7B3WstGS4BiniotU3d3xQ9gK8cR0DbeZ4MuyGCWF65YDyrcDTS3WlrJ3ndSPA1pqhoPw==
@@ -1622,7 +1622,7 @@ commander@^4.0.0:
   resolved "https://registry.yarnpkg.com/commander/-/commander-4.1.1.tgz#9fd602bd936294e9e9ef46a3f4d6964044b18068"
   integrity sha512-NOKm8xhkzAjzFx8B2v5OAHT+u5pRQc2UCa2Vq9jYL/31o2wi9mxBA7LIFs3sV5VSC49z6pEhfbMULvShKj26WA==
 
-commitlint@^17.0.2:
+commitlint@17.0.2:
   version "17.0.2"
   resolved "https://registry.yarnpkg.com/commitlint/-/commitlint-17.0.2.tgz#24aef43c528e1f3326c7df29e72ff6d6fd580b0c"
   integrity sha512-7SKvi162t7F1WiNIZDtxLWYzMIqE0YNHVICyZ95CpFNdyGlJy8WpGojiTyCEzL2zX7V6oId+aBz6hy2P4qPpHw==
