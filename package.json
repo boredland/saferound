@@ -1,6 +1,6 @@
 {
   "name": "saferound",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "sum-safe rounding of number-arrays",
   "repository": "https://github.com/boredland/saferound",
   "author": "Jonas Strassel <info@jonas-strassel.de>",
