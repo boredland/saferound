@@ -1,7 +1,5 @@
 import { roundToPlaces, safeRound, sumUp } from './safeRound';
 
-const fixture = [4.0001, 3.2345, 3.2321, 6.4523, 5.3453, 7.3422];
-
 describe('round', () => {
     test('round to no places (int)', () => {
         const result = roundToPlaces(1.6);
@@ -32,6 +30,8 @@ describe('sum', () => {
 })
 
 describe('safe round', () => {
+    const fixture = [4.0001, 3.2345, 3.2321, 6.4523, 5.3453, 7.3422];
+
     test('to 0 places (int)', () => {
         const result = safeRound(fixture, 0);
         expect(result).toEqual([4, 3, 3, 6, 6, 8]);
