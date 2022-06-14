@@ -833,7 +833,7 @@
   dependencies:
     "@octokit/openapi-types" "^11.2.0"
 
-"@release-it/conventional-changelog@^5.0.0":
+"@release-it/conventional-changelog@5.0.0":
   version "5.0.0"
   resolved "https://registry.yarnpkg.com/@release-it/conventional-changelog/-/conventional-changelog-5.0.0.tgz#2359e19f7d609c60c31a680faaaeead6efc752d7"
   integrity sha512-YAvGgxA8cIQSbmyHmAmLMwzCkNP74upLST8jFuDJTI+AVfK2Grp2HbZu0/NeV3sHYD20sT8YMzNVUeRxNlyHeg==
@@ -984,7 +984,7 @@
   dependencies:
     "@types/istanbul-lib-report" "*"
 
-"@types/jest@^28.1.1":
+"@types/jest@28.1.1":
   version "28.1.1"
   resolved "https://registry.yarnpkg.com/@types/jest/-/jest-28.1.1.tgz#8c9ba63702a11f8c386ee211280e8b68cb093cd1"
   integrity sha512-C2p7yqleUKtCkVjlOur9BWVA4HgUQmEj/HWCt5WzZ5mLXrWnyIfl0wGuArc+kBXsy0ZZfLp+7dywB4HtSVYGVA==
@@ -2896,7 +2896,7 @@ human-signals@^3.0.1:
   resolved "https://registry.yarnpkg.com/human-signals/-/human-signals-3.0.1.tgz#c740920859dafa50e5a3222da9d3bf4bb0e5eef5"
   integrity sha512-rQLskxnM/5OCldHo+wNXbpVgDn5A17CUoKX+7Sokwaknlq7CdSnphy0W39GU8dw59XiCXmFXDg4fRuckQRKewQ==
 
-husky@^8.0.0:
+husky@8.0.1:
   version "8.0.1"
   resolved "https://registry.yarnpkg.com/husky/-/husky-8.0.1.tgz#511cb3e57de3e3190514ae49ed50f6bc3f50b3e9"
   integrity sha512-xs7/chUH/CKdOCs7Zy0Aev9e/dKOMZf3K1Az1nar3tzlv0jfqnYtu235bstsWTmXOR0EfINrPa97yy4Lz6RiKw==
@@ -3712,7 +3712,7 @@ jest-worker@^28.1.1:
     merge-stream "^2.0.0"
     supports-color "^8.0.0"
 
-jest@^28.1.1:
+jest@28.1.1:
   version "28.1.1"
   resolved "https://registry.yarnpkg.com/jest/-/jest-28.1.1.tgz#3c39a3a09791e16e9ef283597d24ab19a0df701e"
   integrity sha512-qw9YHBnjt6TCbIDMPMpJZqf9E12rh6869iZaN08/vpOGgHJSAaLLUn6H8W3IAEuy34Ls3rct064mZLETkxJ2XA==
@@ -4808,7 +4808,7 @@ registry-url@^5.0.0:
   dependencies:
     rc "^1.2.8"
 
-release-it@^15.0.0:
+release-it@15.0.0:
   version "15.0.0"
   resolved "https://registry.yarnpkg.com/release-it/-/release-it-15.0.0.tgz#82be33b3d483b2832b6a43faf765fdb82af6bc2a"
   integrity sha512-Dnio6p+1O88UdQZmPjdXqq+Nrrn5t0USZyOctTPK5M36kOOfQTdp8V1Wlagz9QYIYr93NwovEZ+f4wK0P/kHbw==
@@ -5437,7 +5437,7 @@ ts-interface-checker@^0.1.9:
   resolved "https://registry.yarnpkg.com/ts-interface-checker/-/ts-interface-checker-0.1.13.tgz#784fd3d679722bc103b1b4b8030bcddb5db2a699"
   integrity sha512-Y/arvbn+rrz3JCKl9C4kVNfTfSm2/mEp5FSz5EsZSANGPSlQrpRI5M4PKF+mJnE52jOO90PnPSc3Ur3bTQw0gA==
 
-ts-jest@^28.0.5:
+ts-jest@28.0.5:
   version "28.0.5"
   resolved "https://registry.yarnpkg.com/ts-jest/-/ts-jest-28.0.5.tgz#31776f768fba6dfc8c061d488840ed0c8eeac8b9"
   integrity sha512-Sx9FyP9pCY7pUzQpy4FgRZf2bhHY3za576HMKJFs+OnQ9jS96Du5vNsDKkyedQkik+sEabbKAnCliv9BEsHZgQ==
@@ -5451,7 +5451,7 @@ ts-jest@^28.0.5:
     semver "7.x"
     yargs-parser "^21.0.1"
 
-ts-node@^10.8.0, ts-node@^10.8.1:
+ts-node@10.8.1, ts-node@^10.8.0:
   version "10.8.1"
   resolved "https://registry.yarnpkg.com/ts-node/-/ts-node-10.8.1.tgz#ea2bd3459011b52699d7e88daa55a45a1af4f066"
   integrity sha512-Wwsnao4DQoJsN034wePSg5nZiw4YKXf56mPIAeD6wVmiv+RytNSWqc2f3fKvcUoV+Yn2+yocD71VOfQHbmVX4g==
@@ -5475,7 +5475,7 @@ tslib@^2.0.1, tslib@^2.1.0:
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.4.0.tgz#7cecaa7f073ce680a05847aa77be941098f36dc3"
   integrity sha512-d6xOpEDfsi2CZVlPQzGeux8XMwLT9hssAsaPYExaQMuYskwb+x1x7J371tWlbBdWHroy99KnVB6qIkUbs5X3UQ==
 
-tsup@^6.1.2:
+tsup@6.1.2:
   version "6.1.2"
   resolved "https://registry.yarnpkg.com/tsup/-/tsup-6.1.2.tgz#e2232f8032c3ac8baeecca724e982279f7c1e78d"
   integrity sha512-Hw4hKDHaAQkm2eVavlArEOrAPA93bziRDamdfwaNs0vXQdUUFfItvUWY0L/F6oQQMVh6GvjQq1+HpDXw8UKtPA==
@@ -5549,7 +5549,7 @@ typedarray@^0.0.6:
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
   integrity sha512-/aCDEGatGvZ2BIk+HmLf4ifCJFwvKFNb9/JeZPMulfgFracn9QFcAf5GO8B/mweUjSoblS5In0cWhqpfs/5PQA==
 
-typescript@^4.6.4, typescript@^4.7.3:
+typescript@4.7.3, typescript@^4.6.4:
   version "4.7.3"
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.7.3.tgz#8364b502d5257b540f9de4c40be84c98e23a129d"
   integrity sha512-WOkT3XYvrpXx4vMMqlD+8R8R37fZkjyLGlxavMc4iB8lrl8L0DeTcHbYgw/v0N/z9wAFsgBhcsF0ruoySS22mA==
