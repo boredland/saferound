@@ -1,5 +1,7 @@
 
 
+## [1.1.1](https://github.com/boredland/saferound/compare/1.1.0...1.1.1) (2022-06-14)
+
 ## 1.1.0 (2022-06-14)
 
 
