@@ -6,14 +6,14 @@
   "author": "Jonas Strassel <info@jonas-strassel.de>",
   "license": "MIT",
   "private": false,
-  "main": "./dist/saferound.js",
-  "module": "./dist/saferound.mjs",
-  "types": "./dist/saferound.d.ts",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "require": "./dist/saferound.js",
-      "import": "./dist/saferound.mjs",
-      "types": "./dist/saferound.d.ts"
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.ts"
     }
   },
   "publishConfig": {
@@ -35,7 +35,7 @@
     "typescript": "^4.7.3"
   },
   "scripts": {
-    "build": "tsup src/safeRound.ts --format cjs,esm --dts --clean --minify",
+    "build": "tsup src/index.ts --format cjs,esm --dts --clean --minify",
     "prerelease": "yarn test && yarn build",
     "release": "release-it",
     "test": "jest",

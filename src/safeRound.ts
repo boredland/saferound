@@ -51,5 +51,3 @@ export const safeRound = (values: number[], places = 0) => {
   }
   return local;
 };
-
-export default safeRound;
