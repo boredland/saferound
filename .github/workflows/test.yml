@@ -1,0 +1,24 @@
+name: test
+
+on:
+  pull_request:
+
+jobs:
+  test-action:
+    runs-on: ubuntu-latest
+    name: test
+    steps:
+      - name: checkout
+        uses: actions/checkout@2541b1294d2704b0964813337f33b291d3f8596b # tag=v3
+        with:
+          token: ${{ github.token }}
+          fetch-depth: 0
+      - name: setup node
+        uses: actions/setup-node@eeb10cff27034e7acf239c5d29f62154018672fd # tag=v3
+        with:
+          node-version: 'node'
+          cache: 'yarn'
+      - name: install
+        run: yarn --frozen-lockfile
+      - name: test
+        run: yarn test
