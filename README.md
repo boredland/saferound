@@ -1,6 +1,7 @@
 # saferound
 
 [![npm](https://img.shields.io/npm/v/saferound)](https://www.npmjs.com/package/saferound)
+![npm bundle size (version)](https://img.shields.io/bundlephobia/minzip/saferound/latest)
 [![npm](https://img.shields.io/npm/dw/safeparse)](https://www.npmjs.com/package/saferound)
 [![GitHub](https://img.shields.io/github/license/boredland/saferound)](./LICENSE)
 [![test](https://github.com/boredland/saferound/actions/workflows/test.yml/badge.svg)](https://github.com/boredland/saferound/actions/workflows/test.yml)
