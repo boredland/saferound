@@ -5,6 +5,7 @@
 [![npm](https://img.shields.io/npm/dw/safeparse)](https://www.npmjs.com/package/saferound)
 [![GitHub](https://img.shields.io/github/license/boredland/saferound)](./LICENSE)
 [![test](https://github.com/boredland/saferound/actions/workflows/test.yml/badge.svg)](https://github.com/boredland/saferound/actions/workflows/test.yml)
+[![Coverage Status](https://coveralls.io/repos/github/boredland/saferound/badge.svg?branch=main)](https://coveralls.io/github/boredland/saferound?branch=main)
 
 ## About
 
