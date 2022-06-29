@@ -33,7 +33,7 @@ const _mininc = (places = 0) => {
 export const safeRound = (values: number[], places = 0) => {
   const local = [...values];
   const originalSum = sumUp(local, places);
-  let localSum = originalSum-1;
+  let localSum = originalSum-99999;
   let increment = -1;
 
   while (localSum !== originalSum) {
