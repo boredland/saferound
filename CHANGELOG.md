@@ -1,5 +1,7 @@
 
 
+## [1.1.4](https://github.com/boredland/saferound/compare/1.1.3...1.1.4) (2023-02-24)
+
 ## [1.1.3](https://github.com/boredland/saferound/compare/1.1.2...1.1.3) (2023-02-24)
 
 
