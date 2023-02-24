@@ -17,27 +17,40 @@ export const sumUp = (values: number[], places = 0) => {
  * @param places - places to round to
  * @returns rounded number
  */
-export const roundToPlaces = (value: number, places = 0) =>
+export const roundToPlaces = (value: number, places: number) =>
   Math.round((value + Number.EPSILON) * 10 ** places) / 10 ** places;
 
-const _mininc = (places = 0) => {
+const _mininc = (places: number) => {
   return 1 / 10 ** places;
 };
 
 class ListNumber {
-  public original: number;
-  public diff: number = NaN;
+  private _value: number;
+  private _diff: number = NaN;
 
-  constructor(public order: number, public value: number, private places = 0) {
-    this.original = value;
-    this.round();
+  constructor(
+    public readonly order: number, 
+    public readonly original: number, 
+    private readonly places = 0
+  ) {
+    this._value = this.original;
+    this.add(0);
   }
 
-  public round(places = this.places) {
-    this.value = roundToPlaces(this.value, places);
-    this.diff = this.original - this.value;
+  get value(){
+    return this._value;
+  }
+
+  get diff() {
+    return this._diff;
+  }
+
+  public add(increment: number) {
+    this._value = roundToPlaces(this.value + increment, this.places);
+    this._diff = this.original - this.value;
   }
 }
+
 /**
  * Safely round a list of values so, that their resulting sum equals the input values sum
  * @param values - values to round
@@ -45,11 +58,9 @@ class ListNumber {
  * @returns list of rounded values
  */
 export const safeRound = (values: number[], places = 0) => {
-  let local: ListNumber[] = values.map((value, index) => {
-    return new ListNumber(index, value, places)
-  });
+  let local: ListNumber[] = values.map((value, index) => new ListNumber(index, value, places));
   const originalSum = sumUp(local.map(value => value.original), places);
-  let localSum = sumUp(local.map(value => value.value), places);
+  let localSum = sumUp(local.map(item => item.value), places);
   let increment = -1;
 
   while (localSum !== originalSum) {
@@ -61,12 +72,11 @@ export const safeRound = (values: number[], places = 0) => {
     }
     const tweaks = Math.floor(Math.abs(diff) / _mininc(places));
     local = local.sort((a,b) => a.diff - b.diff);
-     
+
     [...local.slice(0, tweaks)].forEach((v, i) => {
-      local[i].value += increment;
-      local[i].round();
+      local[i].add(increment);
     });
-    localSum = sumUp(local.map(value => value.value), places);
+    localSum = sumUp(local.map(item => item.value), places);
   }
-  return local.sort((a, b) => a.order - b.order).map(value =>  value.value);
+  return local.sort((a, b) => a.order - b.order).map(item =>  item.value);
 };

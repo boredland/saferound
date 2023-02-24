@@ -2,7 +2,7 @@ import { roundToPlaces, safeRound, sumUp } from './safeRound';
 
 describe('round', () => {
     test('round to no places (int)', () => {
-        const result = roundToPlaces(1.6);
+        const result = roundToPlaces(1.6, 0);
         expect(result).toBe(2);
     });
 
