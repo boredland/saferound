@@ -34,20 +34,41 @@ describe('safe round', () => {
 
     test('to 0 places (int)', () => {
         const result = safeRound(fixture, 0);
-        expect(result).toEqual([4, 3, 3, 6, 6, 8]);
+        expect(result).toEqual([
+            5,
+            3,
+            4,
+            6,
+            5,
+            7,
+        ]);
         expect(sumUp(result)).toBe(sumUp(fixture));
     });
 
     test('rounds to second place (decimal)', () => {
         const result = safeRound(fixture, 2);
-        expect(result).toEqual([4, 3.23, 3.23, 6.45, 5.35, 7.35]);
+        expect(result).toEqual([
+            4,
+            3.23,
+            3.23,
+            6.45,
+            5.36,
+            7.34,
+        ]);
         expect(sumUp(result)).toBe(sumUp(fixture));
     });
 
     test('rounds negative (decimal)', () => {
         const negativeFixture = fixture.map(v => v * -1);
         const result = safeRound(negativeFixture, 2);
-        expect(result).toEqual([-4.01, -3.23, -3.23, -6.45, -5.35, -7.34]);
+        expect(result).toEqual([
+            -4,
+            -3.24,
+            -3.23,
+            -6.45,
+            -5.35,
+            -7.34,
+        ]);
         expect(sumUp(result)).toBe(sumUp(negativeFixture));
     });
 
@@ -61,5 +82,36 @@ describe('safe round', () => {
     test('returns empty on empty input', () => {
         const result = safeRound([], 5);
         expect(result).toEqual([]);
+    });
+
+    test('rounds near zero', () => {
+        const fixture = [
+            0.013245557004700679,
+            0.7268604797100215,
+            0.6155001637295456,
+            0.06875329582046738,
+            0.8387831576913838,
+            0.03243429881206358,
+            0.0023860988000495792,
+            0.41960946536150784,
+            0.675551119386058,
+            0.6409523907667709,
+            0.9659239729174308,
+        ];
+        const result = safeRound(fixture);
+        expect(result).toEqual([
+            0,
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+        ]);
+        expect(sumUp(result)).toBe(sumUp(fixture));
     });
 })
