@@ -7,7 +7,7 @@
 export const sumUp = (values: number[], places = 0) => {
   return roundToPlaces(
     values.reduce((pre, current) => pre + current, 0),
-    places,
+    places
   );
 };
 
@@ -20,24 +20,20 @@ export const sumUp = (values: number[], places = 0) => {
 export const roundToPlaces = (value: number, places: number) =>
   Math.round((value + Number.EPSILON) * 10 ** places) / 10 ** places;
 
-const _mininc = (places: number) => {
-  return 1 / 10 ** places;
-};
-
 class ListNumber {
   private _value: number;
   private _diff: number = NaN;
 
   constructor(
-    public readonly order: number, 
-    public readonly original: number, 
+    public readonly order: number,
+    public readonly original: number,
     private readonly places = 0
   ) {
     this._value = this.original;
     this.add(0);
   }
 
-  get value(){
+  get value() {
     return this._value;
   }
 
@@ -55,7 +51,9 @@ class List {
   private _items: ListNumber[];
 
   constructor(values: number[], private places: number) {
-    this._items = values.map((value, index) => new ListNumber(index, value, this.places))
+    this._items = values.map(
+      (value, index) => new ListNumber(index, value, this.places)
+    );
   }
 
   public update(items: ListNumber[]) {
@@ -63,19 +61,19 @@ class List {
   }
 
   get items() {
-    return this._items.sort((a,b) => a.order - b.order);
+    return this._items.sort((a, b) => a.order - b.order);
   }
 
   private get original() {
-    return this.items.map(item => item.original);
+    return this.items.map((item) => item.original);
   }
 
   public get values() {
-    return this.items.map(item => item.value);
+    return this.items.map((item) => item.value);
   }
 
   get sum() {
-    return sumUp(this.values, this.places)
+    return sumUp(this.values, this.places);
   }
 
   get originalSum() {
@@ -91,26 +89,24 @@ class List {
  */
 export const safeRound = (values: number[], places = 0) => {
   let list = new List(values, places);
-  let increment = -1;
+  const minic = 1 / 10 ** places;
 
   while (list.sum !== list.originalSum) {
     const diff = roundToPlaces(list.originalSum - list.sum, places);
 
-    let reverse = true;
-    if (diff < 0) {
-      increment = -1 * _mininc(places);
-      reverse = false;
-    } else {
-      increment = _mininc(places);
-      reverse = true;
-    }
-    const tweaks = Math.floor(Math.abs(diff) / _mininc(places));
-    const items = list.items.sort((a,b) => reverse ? b.diff - a.diff : a.diff - b.diff);
+    const negadiff = diff < 0;
+    const increment = negadiff ? -1 * minic : minic;
+
+    const tweaks = Math.floor(Math.abs(diff) / minic);
+    // 
+    const items = list.items.sort((a, b) =>
+      negadiff ? a.diff - b.diff : b.diff - a.diff
+    );
 
     [...items.slice(0, tweaks)].forEach((v, i) => {
       items[i].add(increment);
     });
-    list.update(items)
+    list.update(items);
   }
   return list.values;
 };
