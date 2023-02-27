@@ -1,5 +1,12 @@
 
 
+## [1.2.0](https://github.com/boredland/saferound/compare/1.1.5...1.2.0) (2023-02-27)
+
+
+### Features
+
+* add reverse mechanism ([c643f4f](https://github.com/boredland/saferound/commit/c643f4f23d2e9399441dbc17d1703eaf4c9aea05))
+
 ## [1.1.5](https://github.com/boredland/saferound/compare/1.1.4...1.1.5) (2023-02-24)
 
 ## [1.1.4](https://github.com/boredland/saferound/compare/1.1.3...1.1.4) (2023-02-24)
