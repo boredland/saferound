@@ -95,13 +95,17 @@ export const safeRound = (values: number[], places = 0) => {
 
   while (list.sum !== list.originalSum) {
     const diff = roundToPlaces(list.originalSum - list.sum, places);
+
+    let reverse = true;
     if (diff < 0) {
       increment = -1 * _mininc(places);
+      reverse = false;
     } else {
       increment = _mininc(places);
+      reverse = true;
     }
     const tweaks = Math.floor(Math.abs(diff) / _mininc(places));
-    const items = list.items.sort((a,b) => a.diff - b.diff);
+    const items = list.items.sort((a,b) => reverse ? b.diff - a.diff : a.diff - b.diff);
 
     [...items.slice(0, tweaks)].forEach((v, i) => {
       items[i].add(increment);
