@@ -26,7 +26,7 @@
     "@release-it/conventional-changelog": "5.1.1",
     "@types/jest": "29.5.14",
     "commitlint": "17.8.1",
-    "husky": "8.0.3",
+    "lefthook": "latest",
     "jest": "29.7.0",
     "release-it": "15.11.0",
     "ts-jest": "29.4.9",
@@ -39,7 +39,7 @@
     "prerelease": "bun run test && bun run build",
     "release": "release-it",
     "test": "jest",
-    "prepare": "husky install"
+    "prepare": "lefthook install"
   },
   "packageManager": "bun@1.3.12"
 }
