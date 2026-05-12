@@ -2,7 +2,10 @@
   "name": "saferound",
   "version": "1.2.1",
   "description": "sum-safe rounding of number-arrays",
-  "repository": "https://github.com/boredland/saferound",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/boredland/saferound.git"
+  },
   "author": "Jonas Strassel <info@jonas-strassel.de>",
   "license": "MIT",
   "private": false,
