@@ -1,6 +1,6 @@
 {
   "name": "saferound",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "sum-safe rounding of number-arrays",
   "repository": "https://github.com/boredland/saferound",
   "author": "Jonas Strassel <info@jonas-strassel.de>",
@@ -36,9 +36,10 @@
   },
   "scripts": {
     "build": "tsup src/index.ts --format cjs,esm --dts --clean --minify",
-    "prerelease": "yarn test && yarn build",
+    "prerelease": "bun run test && bun run build",
     "release": "release-it",
     "test": "jest",
     "prepare": "husky install"
-  }
+  },
+  "packageManager": "bun@1.3.12"
 }

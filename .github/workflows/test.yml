@@ -16,15 +16,14 @@ jobs:
         with:
           token: ${{ github.token }}
           fetch-depth: 0
-      - name: setup node
-        uses: actions/setup-node@3235b876344d2a9aa001b8d1453c930bba69e610 # v3
+      - name: setup bun
+        uses: oven-sh/setup-bun@v2
         with:
-          node-version: 'node'
-          cache: 'yarn'
+          bun-version: latest
       - name: install
-        run: yarn --frozen-lockfile
+        run: bun install --frozen-lockfile
       - name: test
-        run: yarn test
+        run: bun run test
       - name: coverage
         uses: coverallsapp/github-action@09b709cf6a16e30b0808ba050c7a6e8a5ef13f8d # master
         with:
