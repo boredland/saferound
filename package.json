@@ -32,7 +32,7 @@
     "lefthook": "latest",
     "jest": "29.7.0",
     "release-it": "15.11.0",
-    "ts-jest": "29.4.9",
+    "ts-jest": "29.4.11",
     "ts-node": "10.9.2",
     "tsup": "6.7.0",
     "typescript": "4.9.5"
