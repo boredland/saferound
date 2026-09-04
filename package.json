@@ -44,5 +44,5 @@
     "test": "jest",
     "prepare": "lefthook install"
   },
-  "packageManager": "bun@1.4.0"
+  "packageManager": "bun@1.4.1"
 }
